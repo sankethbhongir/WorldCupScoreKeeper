@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ef121112</color>
+    <color name="yellowCardColor">#f2e300</color>
+<color name="redCardColor">#eb0c10</color>
+    <color name="penaltyColor">#51ce2e</color>
+    <color name="goalTheme">#0881d3</color>
+
+</resources>

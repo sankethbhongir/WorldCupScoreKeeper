@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fifia_cup_logo_russia">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/france" />
+
+                <TextView
+                    android:id="@+id/scoreOfFrance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/score"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/penalty_france"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/basic"
+                        android:text="@string/penalties"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/yellowCard_france"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/penalty_france"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/basic"
+                        android:text="@string/yellowCards"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yellowCard_france"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/basic"
+                        android:text="@string/redCards"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/france_penalty_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toStartOf="@id/penalty_france"
+                        android:text="@string/score"
+                        android:textColor="@color/penaltyColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/france_yellow_cards_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/france_penalty_board"
+                        android:layout_below="@id/penalty_france"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/france_yellow_cards_board"
+                        android:text="@string/score"
+                        android:textColor="@color/yellowCardColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/france_red_cards_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/france_penalty_board"
+                        android:layout_below="@id/yellowCard_france"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/france_red_cards_board"
+                        android:text="@string/score"
+                        android:textColor="@color/redCardColor"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/france_goal_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+
+                    android:text="@string/goal"
+                    android:theme="@style/goalTheme" />
+
+                <Button
+                    android:id="@+id/france_yellow_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+
+                    android:text="@string/yellowCard"
+                    android:theme="@style/yellowCardTheme" />
+
+                <Button
+                    android:id="@+id/france_red_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+
+                    android:text="@string/redCard"
+                    android:theme="@style/redCardTheme" />
+
+                <Button
+
+                    android:id="@+id/france_penalty_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+
+                    android:text="@string/penalty"
+                    android:theme="@style/penaltyTheme" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/england" />
+
+                <TextView
+                    android:id="@+id/scoreOfEngland"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/score"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/penalty_england"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/basic"
+                        android:text="@string/penalties"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/yellowCard_england"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/penalty_england"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/basic"
+                        android:text="@string/yellowCards"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yellowCard_england"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/basic"
+                        android:text="@string/redCards"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/england_penalty_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toStartOf="@id/penalty_england"
+                        android:text="@string/score"
+                        android:textColor="@color/penaltyColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/england_yellow_cards_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/england_penalty_board"
+                        android:layout_below="@id/penalty_england"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/england_yellow_cards_board"
+                        android:text="@string/score"
+                        android:textColor="@color/yellowCardColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/england_red_cards_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/england_penalty_board"
+                        android:layout_below="@id/yellowCard_england"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/england_red_cards_board"
+                        android:text="@string/score"
+                        android:textColor="@color/redCardColor"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+
+                <Button
+
+                    android:id="@+id/england_goal_btn"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+
+                    android:text="@string/goal"
+                    android:theme="@style/goalTheme" />
+
+                <Button
+                    android:id="@+id/england_yellow_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+
+                    android:text="@string/yellowCard"
+                    android:theme="@style/yellowCardTheme" />
+
+                <Button
+                    android:id="@+id/england_red_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+
+                    android:text="@string/redCard"
+                    android:theme="@style/redCardTheme" />
+
+                <Button
+                    android:id="@+id/england_penalty_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+
+                    android:text="@string/penalty"
+                    android:theme="@style/penaltyTheme" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/reset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="12dp"
+            android:text="@string/reset"
+            android:theme="@style/resetTheme" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/fifa_world_cup_2018_russia" />
+
+    </LinearLayout>
+</ScrollView>

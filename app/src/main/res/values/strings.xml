@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">World Cup ScoreKeeper</string>
+    <string name="score">0</string>
+    <string name="penalty">penalty</string>
+    <string name="penalties">Penalties</string>
+    <string name="yellowCard">Yellow Card</string>
+    <string name="yellowCards">Yellow cards</string>
+    <string name="redCard">Red Card</string>
+    <string name="redCards">Red cards</string>
+    <string name="goal">Goal</string>
+    <string name="reset">Reset</string>
+</resources>
+
