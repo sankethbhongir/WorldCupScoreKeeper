@@ -41,6 +41,56 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        if(savedInstanceState != null){
+            scoreForFrance = savedInstanceState.getInt("scoreFrance");
+            scoreForEngland = savedInstanceState.getInt("scoreEngland");
+            penaltyOfFrance = savedInstanceState.getInt("penaltyFrance");
+            penaltyOfEngland = savedInstanceState.getInt("penaltyEngland");
+            yellowCardOfFrance = savedInstanceState.getInt("yellowCardFrance");
+            yellowCardOfEngland = savedInstanceState.getInt("yellowCardEngland");
+            redCardOfFrance = savedInstanceState.getInt("redCardFrance");
+            redCardOfEngland = savedInstanceState.getInt("redCardEngland");
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        scoreForFrance = savedInstanceState.getInt("scoreFrance");
+        scoreForEngland = savedInstanceState.getInt("scoreEngland");
+        penaltyOfFrance = savedInstanceState.getInt("penaltyFrance");
+        penaltyOfEngland = savedInstanceState.getInt("penaltyEngland");
+        yellowCardOfFrance = savedInstanceState.getInt("yellowCardFrance");
+        yellowCardOfEngland = savedInstanceState.getInt("yellowCardEngland");
+        redCardOfFrance = savedInstanceState.getInt("redCardFrance");
+        redCardOfEngland = savedInstanceState.getInt("redCardEngland");
+
+        scoreOfFrance.setText(String.valueOf(scoreForFrance));
+        scoreOfEngland.setText(String.valueOf(scoreForEngland));
+        englandPenaltyBoard.setText(String.valueOf(penaltyOfEngland));
+        francePenaltyBoard.setText(String.valueOf(penaltyOfFrance));
+        englandYellowCardsBoard.setText(String.valueOf(yellowCardOfEngland));
+        franceYellowCardsBoard.setText(String.valueOf(yellowCardOfFrance));
+        englandRedCardsBoard.setText(String.valueOf(redCardOfEngland));
+        franceRedCardsBoard.setText(String.valueOf(redCardOfFrance));
+
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+        outState.putInt("scoreFrance",scoreForFrance);
+        outState.putInt("scoreEngland",scoreForEngland);
+        outState.putInt("penaltyFrance",penaltyOfFrance);
+        outState.putInt("penaltyEngland",penaltyOfEngland);
+        outState.putInt("yellowCardFrance",yellowCardOfFrance);
+        outState.putInt("yellowCardEngland",yellowCardOfEngland);
+        outState.putInt("redCardFrance",redCardOfFrance);
+        outState.putInt("redCardEngland",redCardOfEngland);
+        super.onSaveInstanceState(outState);
+
     }
 
     /**
